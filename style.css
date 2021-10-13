@@ -1,0 +1,280 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 300, 400, 500 */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+html{
+    /* ### Primary */
+
+--Blue: hsl(246, 80%, 60%);
+
+--Lightredwork: hsl(15, 100%, 70%);
+--Softblueplay: hsl(195, 74%, 62%);
+--Lightredstudy: hsl(348, 100%, 68%);
+--Limegreenexercise: hsl(145, 58%, 55%);
+--Violetsocial: hsl(264, 64%, 52%);
+--Softorangeselfcare: hsl(43, 84%, 65%);
+
+/* ### Neutral */
+
+--Verydarkblue: hsl(226, 43%, 10%);
+--Darkblue: hsl(235, 46%, 20%);
+--Desaturatedblue: hsl(235, 45%, 61%);
+--PaleBlue: hsl(236, 100%, 87%);
+
+font-family: "Rubik", sans-serif;
+color: white;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Verydarkblue);
+    height: 100vh;
+    width: 100vw;
+}
+
+/* setting the colors for the divs */
+.profileinfo{
+    background-color: var(--Desaturatedblue);
+}
+.timeframes, .tiles{
+    background-color: var(--Darkblue);
+}
+
+/* Setting color for icon divs */
+.tile-1 .icon{
+    background-color: var(--Lightredwork);
+}
+.tile-2 .icon{
+    background-color: var(--Softblueplay);
+}
+.tile-3 .icon{
+    background-color: var(--Lightredstudy);
+}
+.tile-4 .icon{
+    background-color: var(--Limegreenexercise);
+}
+.tile-5 .icon{
+    background-color: var(--Violetsocial);
+}
+.tile-6 .icon{
+    background-color: var(--Softorangeselfcare);
+}
+
+/* Temporary border for easier edit */
+/* .profile, .tiles, .container, .timeframes {
+    border:1px solid black;
+} */
+
+/* font sizes for the profile div */
+.profile h3, .profile h1{
+    margin: 0;
+    font-weight: 400;
+}
+
+.profile h3{
+    font-size: .9rem;
+    opacity: .8;
+    font-weight: 300;
+}
+
+.profile h1{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+
+
+/* profile picture */
+.profileinfo{
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.imageinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.profilepic{
+    width: 30%;
+    display: flex;
+}
+
+.profilepic img{
+    height: 55%;
+    padding: .2rem;
+    margin: auto;
+    background-color: white;
+    border-radius: 50%; 
+}
+
+/* sizing timeframes div within profile div */
+.timeframes{
+    height: 40%;
+}
+
+.timeframes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.timeframes h3{
+    margin: 0;
+    font-weight: 400;
+}
+
+/* height of boxes */
+.profile {
+    height: 180px;
+}
+
+.tiles {
+    height: 140px;
+}
+
+/* container */
+.container{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: auto;
+    width: 335px;
+    height: 1550px;
+    gap: 4.5rem;
+}
+
+/* Positioning within info divs */
+
+.tiles{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+}
+
+.todaysinfo, .previousinfo{
+    width: 37%;
+}
+
+.previousinfo .fas, .previousinfo p{
+    opacity: .8;
+}
+
+#infotitle {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+#infoamount {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+#infotitle, #infoamount{
+    margin: 1rem 0;
+}
+
+.fas {
+    width: 100%;
+margin: .3rem 0;
+text-align: right;
+}
+
+
+
+/* positioning the icons outside of tiles using Position: Absolute; */
+.tiles{
+    position: relative;
+    border-radius: 1.5rem;
+}
+
+.icon {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: -42px;
+    z-index: -1;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+}
+
+.icon img{
+    width: 25%;
+    position: absolute;
+    top: -5px;
+    left: 70%;
+}
+
+/* Doing the same as above but with profile div */
+.profile{
+    position: relative;
+    border-radius: 1.5rem;
+}
+.profileinfo{
+    border-radius: 1rem;
+}
+
+.timeframes{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+    bottom: -10px;
+    z-index: -1;
+}
+
+/* fix for the text in absolute div */
+.timeframes h3{
+    margin-top: 32px;
+}
