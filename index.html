@@ -12,9 +12,12 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution { font-size: 11px; text-align: center;}
+    .attribution a { color: hsl(228, 45%, 44%);}
+    
   </style>
+
+  <script src="app.js" defer></script>
 </head>
 <body>
 
@@ -31,9 +34,9 @@
      </div>
 
     <div class="timeframes">
-      <h3>Daily</h3>  
-      <h3>Weekly</h3> 
-      <h3>Monthly</h3> 
+      <h3 ><a href="#" id="Daily">Daily</a> </h3>  
+      <h3 ><a href="#" id="Weekly">Weekly</a> </h3> 
+      <h3 ><a href="#" id="Monthly">Monthly</a> </h3>   
     </div>
 
   </div>
@@ -46,12 +49,12 @@
     </div>
     <div class="todaysinfo">
       <p id="infotitle">Work</p>  
-      <p id="infoamount">32hrs</p>   
+      <p><span id="infoamount">32</span></p>   
     </div>
     
     <div class="previousinfo">
       <i class="fas fa-ellipsis-h"></i>
-     <p>Last Week - 7hrs</p>  
+     <p >Last Week - <span id="infoprevious">7</span></p>  
     </div>  
   </div>
 
@@ -62,12 +65,12 @@
     </div>
     <div class="todaysinfo">
       <p id="infotitle">Work</p>  
-      <p id="infoamount">5hrs</p>   
+      <p><span id="infoamount">32</span></p>   
     </div>
     
     <div class="previousinfo">
       <i class="fas fa-ellipsis-h"></i>
-      <p>Last Week - 7hrs </p> 
+      <p >Last Week - <span id="infoprevious">7</span>  </p> 
     </div>  
   </div>
   
@@ -78,12 +81,12 @@
   </div>
   <div class="todaysinfo">
     <p id="infotitle">Work</p>  
-    <p id="infoamount">5hrs</p>   
+    <p><span id="infoamount">32</span></p>    
   </div>
   
   <div class="previousinfo">
     <i class="fas fa-ellipsis-h"></i>
-    <p>Last Week - 7hrs </p> 
+    <p >Last Week - <span id="infoprevious">7hrs</span> </p> 
   </div>  
 </div>
   
@@ -94,12 +97,12 @@
     </div>
       <div class="todaysinfo">
         <p id="infotitle">Work</p>  
-        <p id="infoamount">5hrs</p>   
+        <p><span id="infoamount">32</span></p>    
       </div>
       
       <div class="previousinfo">
         <i class="fas fa-ellipsis-h"></i>
-        <p>Last Week - 7hrs </p> 
+        <p >Last Week - <span id="infoprevious">7hrs</span> </p> 
       </div>  
   </div>
  
@@ -110,12 +113,12 @@
     </div>
       <div class="todaysinfo">
         <p id="infotitle">Work</p>  
-        <p id="infoamount">5hrs</p>   
+        <p><span id="infoamount">32</span></p>   
       </div>
       
       <div class="previousinfo">
         <i class="fas fa-ellipsis-h"></i>
-        <p>Last Week - 7hrs </p> 
+        <p >Last Week - <span id="infoprevious">7hrs</span></p> 
       </div>  
   </div>
   
@@ -126,20 +129,22 @@
     </div>
       <div class="todaysinfo">
         <p id="infotitle">Work</p>  
-        <p id="infoamount">5hrs</p>   
+        <p><span id="infoamount">32</span></p>  
       </div>
       
       <div class="previousinfo">
         <i class="fas fa-ellipsis-h"></i>
-        <p>Last Week - 7hrs </p> 
+        <p >Last Week - <span id="infoprevious">7hrs</span> </p> 
       </div>  
+</div>
 </div>
 
 
+
   
-  <!-- <div class="attribution">
+  <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Jakov Marsic</a>.
-  </div> -->
+    Coded by <a href="https://github.com/devjakov">Jakov Marsic</a>.
+  </div>
 </body>
 </html>

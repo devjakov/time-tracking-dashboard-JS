@@ -57,7 +57,7 @@ html{
 --Verydarkblue: hsl(226, 43%, 10%);
 --Darkblue: hsl(235, 46%, 20%);
 --Desaturatedblue: hsl(235, 45%, 61%);
---PaleBlue: hsl(236, 100%, 87%);
+--PaleBlue: hsl(231, 100%, 71%);
 
 font-family: "Rubik", sans-serif;
 color: white;
@@ -77,7 +77,12 @@ body{
 .profileinfo{
     background-color: var(--Desaturatedblue);
 }
-.timeframes, .tiles{
+.timeframes{
+    background-color: var(--Darkblue);
+}
+
+.tiles{
+    transition: background-color ease-in-out 200ms;
     background-color: var(--Darkblue);
 }
 
@@ -151,6 +156,7 @@ body{
     margin: auto;
     background-color: white;
     border-radius: 50%; 
+    z-index: 2;
 }
 
 /* sizing timeframes div within profile div */
@@ -190,7 +196,7 @@ body{
     gap: 1rem;
     margin: auto;
     width: 335px;
-    height: 1550px;
+    height: 1650px;
     gap: 4.5rem;
 }
 
@@ -209,6 +215,10 @@ align-items: center;
 
 .previousinfo .fas, .previousinfo p{
     opacity: .8;
+}
+
+.previousinfo p{
+    width: 120%; /* this small edit just makes sure there isnt overflow, i'm sure there is a better solution though */
 }
 
 #infotitle {
@@ -260,9 +270,16 @@ text-align: right;
 .profile{
     position: relative;
     border-radius: 1.5rem;
+ 
 }
 .profileinfo{
     border-radius: 1rem;
+    z-index: 1;
+
+    /* I added position absolute and width 100% here because otherwise
+    the links cant be clicked on  */
+    position: absolute;
+    width: 100%;
 }
 
 .timeframes{
@@ -271,10 +288,140 @@ text-align: right;
     width: 100%;
     border-radius: 0 0 1rem 1rem;
     bottom: -10px;
-    z-index: -1;
+    z-index: 0;
 }
 
 /* fix for the text in absolute div */
 .timeframes h3{
     margin-top: 32px;
+}
+
+
+/* styling the buttons */
+.timeframes a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+    transition: opacity ease-in-out 200ms;
+    opacity: .7;
+}
+
+.timeframes a:hover {
+    text-decoration: none;
+    color: white;
+    transition: opacity ease-in-out 200ms;
+    opacity: 1;  
+}
+
+/* hover for tiles */
+
+.tiles:hover{
+    transition: background-color ease-in-out 200ms;
+    background-color: var(--PaleBlue);
+    cursor: pointer;    
+}
+
+/* Formatting values  */
+#infoamount {
+    margin-right: .25rem;
+}
+
+#infoprevious {
+    margin-right: .1rem;
+}
+
+.clicked { opacity: 1 !important;
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.7) !important;
+    color: white !important;
+     }
+
+
+
+
+     /* MEDIA QUERIES FOR DESKTOP START HERE */
+
+@media (min-width:800px){
+    .container{
+        display: grid;
+        grid-template-columns: 270px 270px 270px 270px;
+        grid-template-rows: 220px 220px;
+        height: 1000px;
+        align-items: flex-end;
+        gap:1.5rem;
+    }
+
+    .timeframes{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        bottom: 0;
+        gap: 0.75rem;
+        height: 40%;
+    }
+
+    .timeframes a{
+        margin-left: 1rem;
+        font-size: 1.25rem;
+    }
+
+    .timeframes h3 {
+        margin:0;
+        margin-bottom: .75rem;
+    }
+
+    .profilepic{
+        height: 140px;
+        width: 50%;
+    }
+
+    .profile{
+        grid-row: span 2;
+        height: 100%;
+        width: 270px;
+    }
+
+    .profileinfo {
+        flex-direction: column;
+        height: 320px;
+        justify-content: flex-start;
+    }
+
+    .profile h1{
+        font-size: 2.5rem;
+        width: 50%;
+    }
+
+    .profile h1, .profile h3{
+        margin-left: 2rem;
+    }
+
+    .tiles{
+        flex-direction: column;
+        height: 80%;
+    }
+
+    .todaysinfo{
+        height: 49%;
+        width: 80%;
+    }
+
+    #infoamount{
+        font-size:3rem;
+    }
+
+    .previousinfo{
+        height: 49%;
+        width: 80%;
+    }
+
+    .previousinfo p{
+        margin-top: 2.5rem;
+    }
+
+    .fas{
+        position: absolute;
+        top: 30px;
+        left: -30px;
+        font-size: 1.25rem;
+    }
 }
