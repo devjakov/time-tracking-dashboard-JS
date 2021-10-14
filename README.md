@@ -9,3 +9,5 @@ Learned how to add and remove classes and how to make an added class a priority 
 Again, I used grid and flexbox interchangeably and it made life a breeze.
 
 Overall it took me 3 hours to build mobile version, 2hrs for JS and another 2hrs for desktop.
+
+Github pages link to finished project ->https://devjakov.github.io/time-tracking-dashboard-JS/
