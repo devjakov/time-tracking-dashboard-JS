@@ -1,6 +1,8 @@
 Had a lot of fun doing this, most of the JS coding I learned through following tutorials, this was my first JS code I wrote without following anyone :D
 
-It's pretty simple but the feeling I got from having the button work was a joy :D
+It's pretty simple but the feeling I got from having the buttons work was a joy :D
+
+Learned window.onload in this one
 
 Again, I used grid and flexbox interchangeably and it made life a breeze.
 
